@@ -1,3 +1,5 @@
+//Find the number whose power t is equal to the given number
+//Given-- x=256 ,t=4   ans=4
 #include<bits/stdc++.h>
 using namespace std;
 int power(int mid,int t)
