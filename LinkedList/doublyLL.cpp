@@ -66,7 +66,8 @@ void InsertAtPosition(Node* &head,int data,int pos,Node* &tail)
              cnt++;
         }
         newnode->next=tem2->next;
-        tem2->prev=newnode;
+        Node* nex=tem2->next;
+        nex->prev=newnode;
         newnode->prev=tem2;
         tem2->next=newnode;
     }
