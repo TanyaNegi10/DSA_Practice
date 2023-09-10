@@ -3,7 +3,7 @@
 //         arr2[]={3,4,7,8,9,10}
 //         ans={2,3,4,5,7,8,9,10}
 
-// Brute force
+// Brute force approach
 // #include <bits/stdc++.h>
 // using namespace std;
 // int main()
