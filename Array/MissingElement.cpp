@@ -27,23 +27,45 @@
 // }
 
 //Optimal Approach
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+//     int arr[]={5,4,1,2,2,6,7};
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     int hsh[n+1]={0};
+//     for(int i=0;i<n;i++)
+//     {
+//         hsh[arr[i]]++;
+//     }
+//     for(int j=1;j<=n;j++)
+//     {
+//         if(hsh[j]==0)
+//         {
+//             cout<<j<<" ";
+//         }
+//     }
+//     return 0;
+// }
+
+//One more optimized
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int arr[]={5,4,1,2,2,6,7};
-    int n=sizeof(arr)/sizeof(arr[0]);
-    int hsh[n+1]={0};
-    for(int i=0;i<n;i++)
+    int arr[]={4,2,1,3};
+    int n=5;
+    int xor1=0;
+    for(int i=1;i<=n;i++)
     {
-        hsh[arr[i]]++;
+        xor1^=i;
     }
-    for(int j=1;j<=n;j++)
+    int xor2=0;
+    for(int i=0;i<n-1;i++)
     {
-        if(hsh[j]==0)
-        {
-            cout<<j<<" ";
-        }
+        xor2^=arr[i];
     }
+    int ans=xor1^xor2;
+    cout<<ans;
     return 0;
 }
