@@ -49,23 +49,57 @@
 // }
 
 //One more optimized
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+//     int arr[]={4,2,1,3};
+//     int n=5;
+//     int xor1=0;
+//     for(int i=1;i<=n;i++)
+//     {
+//         xor1^=i;
+//     }
+//     int xor2=0;
+//     for(int i=0;i<n-1;i++)
+//     {
+//         xor2^=arr[i];
+//     }
+//     int ans=xor1^xor2;
+//     cout<<ans;
+//     return 0;
+// }
+
+// One more optimal approach
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int arr[]={4,2,1,3};
-    int n=5;
-    int xor1=0;
-    for(int i=1;i<=n;i++)
+    int arr[]={2,4,1,3};
+    int cntzero=0;
+    int n=4;
+    for(int i=0;i<n;i++)
     {
-        xor1^=i;
+        int ci=arr[i]-1;
+        if(arr[i]!=arr[ci])
+        {
+            swap(arr[i],arr[ci]);
+        }
+        if(arr[i]==0)
+        {
+            cntzero++;
+        }
     }
-    int xor2=0;
-    for(int i=0;i<n-1;i++)
+    if(cntzero==0)
     {
-        xor2^=arr[i];
+        cout<<0<<" ";
     }
-    int ans=xor1^xor2;
-    cout<<ans;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]!=i+1)
+        {
+            cout<<i+1<<" ";
+        }
+    }
     return 0;
 }
