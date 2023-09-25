@@ -50,7 +50,7 @@ int main()
     int arr[]={5,2,4,1,8};
     int n=5;
      int st=0;
-     int e=n-1;
+     int e=n;
      divide(arr,n,st,e);
      for(int ele:arr)
      {
