@@ -29,9 +29,7 @@ int main()
     }
     cout<<sl<<endl;
 }
-
 //TC=O(n^2)
-
 
 //Optimal Approach
 // #include<bits/stdc++.h>
