@@ -58,6 +58,7 @@ void inorder(Node* node)
     cout<<node->data<<" ";
     inorder(node->right);
 }
+//Time complexity of all traversal is O(N)
 int main()
 {
     Node *root=NULL;
