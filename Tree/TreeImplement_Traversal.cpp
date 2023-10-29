@@ -10,6 +10,7 @@ class Node{
         this->data=val;
         this->left=NULL;
         this->right=NULL;
+        
     }
 };
 Node* buildtree(Node* root)
