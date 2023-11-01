@@ -29,14 +29,32 @@ Node *buildtree(Node *root)
     root->right = buildtree(root->right);
     return root;
 }
+int fl(Node* node)
+{
+    int c=0;
+    while(node->left!=NULL)
+    {
+        c++;
+    }
+    return c;
+}
+int fr(Node* node)
+{
+    int c=0;
+    while(node->right!=NULL)
+    {
+        c++;
+    }
+    return c;
+}
 bool BalancedBT(Node* root)
 {
     if (root == NULL)
     {
-        return ;
+        return true ;
     }
-    int lh = BalancedBT(root->left);
-    int rh = BalancedBT(root->right);
+    int lh = fl(root->left);
+    int rh = fr(root->right);
     if (abs(lh - rh) > 1)
     {
         return false;
@@ -51,3 +69,4 @@ int main()
     cout << BalancedBT(root);
     return 0;
 }
+
