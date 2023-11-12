@@ -47,21 +47,21 @@ int fr(Node* node)
     }
     return c;
 }
-bool BalancedBT(Node* root)
-{
-    if (root == NULL)
-    {
-        return true ;
-    }
-    int lh = fl(root->left);
-    int rh = fr(root->right);
-    if (abs(lh - rh) > 1)
-    {
-        return false;
-    }
-    BalancedBT(root->left);
-    BalancedBT(root->right);
-}
+// bool BalancedBT(Node* root)
+// {
+//     if (root == NULL)
+//     {
+//         return true ;
+//     }
+//     int lh = fl(root->left);
+//     int rh = fr(root->right);
+//     if (abs(lh - rh) > 1)
+//     {
+//         return false;
+//     }
+//     BalancedBT(root->left);
+//     BalancedBT(root->right);
+// }
 int main()
 {
     Node *root = NULL;
