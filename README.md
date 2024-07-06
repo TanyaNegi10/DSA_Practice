@@ -1,2 +1,2 @@
 # DSA_Practice
-This contain codes related to DSA in c++
+This contain codes related to DSA in c++ and java
