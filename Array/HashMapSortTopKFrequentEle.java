@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-// Top K Frequent element in array 
+// Sort Top K Frequent element in array 
 //here how to sort map value is defined 
 public class HashMapSortTopKFrequentEle {
     public static void main(String[] args) {
