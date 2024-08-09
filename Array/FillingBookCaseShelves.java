@@ -1,28 +1,34 @@
 package Array;
 
+import java.util.Arrays;
+
 public class FillingBookCaseShelves {
     static int cnt=0;
     static int minHeightShelves(int[][] books, int shelfWidth) {
-        int height=0;
         int n=books.length;
-        
-        return cnt;
-    }
-    static int helper(int[][] books,int shelfWidth,int i,int w)
-    {
-        if(i==books.length-1)
+        int arr[]=new int[n+1];
+        Arrays.fill(arr, Integer.MAX_VALUE);
+        arr[0]=0;
+        for(int i=1;i<=n;i++)
         {
-            return books[i][1];
-        }
-        if(w>shelfWidth)
-        {
-            return 0;
-        }
-        int height=Math.max(books[i][1],helper(books, shelfWidth, i+1,w+books[i][0]));
-        cnt+=height;
-        return helper(books, shelfWidth, i+1, 0);
+            int totalWidth=0;
+            int max_height=0;
+            for(int j=i;j>0;j--)
+            {
+                totalWidth+=books[j-1][0];
+                if(totalWidth>shelfWidth)
+                {
+                    break;
+                }
+                max_height=Math.max(max_height, books[j-1][1]);
+                arr[i]=Math.min(arr[i], max_height+arr[j-1]);
+            }
 
+        }
+        
+        return arr[n];
     }
+    
     public static void main(String[] args) {
         // int[][] books={{1,1},{2,3},{2,3},{1,1},{1,1},{1,1},{1,2}};
         // int shelfWidth=4;
